@@ -1,0 +1,16 @@
+
+conda env create --f environment.yml
+
+When installing the environment using environment.yml file, an error may arise related to installation of inplace_abn package.
+This error comes due to the order of packages inside the environment.yml file.
+
+So, just install pytorch using the following command:
+
+conda install pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.1 -c pytorch
+
+activate the environment
+
+conda activate mvsnet_pl_relRT
+
+and then just update the environment using:
+conda env update --file environment.yml
